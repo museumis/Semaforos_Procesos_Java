@@ -18,11 +18,7 @@ public class Main {
 		for (int i = 0; i < semaforos.length; i++) {
 			semaforos[i] = new Semaphore(0);
 		}
-		// Iniciar Hilo final
-		// HiloFinal hf = new HiloFinal("\tHola soy el hilo final", semaforos[30]);
-		// hf.start();
-
-		// Iniciar hilos
+			// Iniciar hilos
 		for (int i = 0; i < 30; i++) {
 
 			hilos[i] = new HiloCuenta("Hilo " + i, semaforos[i], semaforos[i + 1], i);
